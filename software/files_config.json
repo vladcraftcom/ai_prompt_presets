@@ -35,31 +35,6 @@
   ],
   "readme_template": "  0) prompt_expert.md → заполнить `{ОТРАСЛЬ}` и `{РОЛЬ}` и попросить провести консультацию (не обязательный шаг)\n  1) cursor_prompt.md → заполнить 'Контекст задачи' и доп. требования\n  2) cursor_prompt.md → скормить агенту этот файл\n  3) plan.md → сохранить план от ИИ если он сам не сохранил\n  4) code/, run_log.txt, chat_transcript.md → вести по мере работы\n  5) audit_report.md / changelog.md → после аудита",
   "fields": [],
-  "options": [
-    {
-      "id": "venv",
-      "label": "Create venv (--venv)",
-      "default": false,
-      "description": "Create Python virtual environment in project folder"
-    },
-    {
-      "id": "install",
-      "label": "Install packages (--install)",
-      "default": false,
-      "description": "Install base packages into venv"
-    },
-    {
-      "id": "refresh",
-      "label": "Refresh templates (--refresh-templates)",
-      "default": false,
-      "description": "Overwrite existing template files"
-    },
-    {
-      "id": "force",
-      "label": "Force into existing folder (--force)",
-      "default": false,
-      "description": "Allow creation in non-empty directory"
-    }
-  ]
+  "options": []
 }
 

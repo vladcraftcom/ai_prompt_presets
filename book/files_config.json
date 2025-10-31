@@ -38,16 +38,8 @@
       "id": "genre",
       "label": "Genre (optional)",
       "required": false,
-      "type": "select",
-      "options": [
-        "Fiction",
-        "Non-Fiction",
-        "Technical",
-        "Biography",
-        "Poetry",
-        "Other"
-      ],
-      "description": "Select the book genre"
+      "type": "text",
+      "description": "Enter the book genre"
     }
   ],
   "options": []
