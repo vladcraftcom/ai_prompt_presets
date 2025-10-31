@@ -1,0 +1,55 @@
+{
+  "preset_id": "content_plan",
+  "preset_name": "Content Plan",
+  "description": "Preset for creating content plans for social media (Instagram, TikTok, YouTube, etc.)",
+  "directories": [
+    "content_calendar",
+    "assets",
+    "templates",
+    "analytics"
+  ],
+  "templates": [
+    {
+      "source": "prompt_content_strategy.md",
+      "destination": "content_strategy_prompt.md"
+    },
+    {
+      "source": "prompt_content_calendar.md",
+      "destination": "content_calendar_prompt.md"
+    },
+    {
+      "source": "prompt_content_creator.md",
+      "destination": "content_creator_prompt.md"
+    },
+    {
+      "source": "prompt_content_optimizer.md",
+      "destination": "content_optimizer_prompt.md"
+    }
+  ],
+  "empty_files": [
+    "content_strategy.md",
+    "content_calendar.md",
+    "content_ideas.md",
+    "performance_tracker.md",
+    "hashtag_research.md"
+  ],
+  "readme_template": "  0) content_strategy_prompt.md → заполнить цели, целевую аудиторию и платформы\n  1) content_strategy.md → создать детальную стратегию контента\n  2) content_calendar_prompt.md → использовать для планирования календаря публикаций\n  3) content_calendar.md → создать календарь публикаций\n  4) content_creator_prompt.md → использовать для создания контента\n  5) content_ideas.md → собирать и хранить идеи для контента\n  6) content_optimizer_prompt.md → использовать для оптимизации готового контента\n  7) performance_tracker.md → отслеживать метрики и аналитику\n  8) hashtag_research.md → исследовать и хранить релевантные хештеги",
+  "fields": [
+    {
+      "id": "platforms",
+      "label": "Platforms (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter target platforms (e.g., Instagram, TikTok, YouTube)"
+    },
+    {
+      "id": "niche",
+      "label": "Niche (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter your content niche or topic"
+    }
+  ],
+  "options": []
+}
+

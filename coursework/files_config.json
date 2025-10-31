@@ -1,0 +1,56 @@
+{
+  "preset_id": "coursework",
+  "preset_name": "Coursework",
+  "description": "Preset for academic coursework and research papers",
+  "directories": [
+    "sections",
+    "research",
+    "references",
+    "appendix"
+  ],
+  "templates": [
+    {
+      "source": "prompt_research_planner.md",
+      "destination": "research_planner_prompt.md"
+    },
+    {
+      "source": "prompt_structure_builder.md",
+      "destination": "structure_builder_prompt.md"
+    },
+    {
+      "source": "prompt_writer.md",
+      "destination": "writer_prompt.md"
+    },
+    {
+      "source": "prompt_citation_helper.md",
+      "destination": "citation_helper_prompt.md"
+    }
+  ],
+  "empty_files": [
+    "research_plan.md",
+    "coursework_structure.md",
+    "thesis_statement.md",
+    "references_list.md",
+    "research_log.md",
+    "draft_notes.md"
+  ],
+  "readme_template": "  0) research_planner_prompt.md → заполнить тему, цели исследования и требования\n  1) research_plan.md → создать план исследования и методологию\n  2) thesis_statement.md → сформулировать основную гипотезу/тезис\n  3) structure_builder_prompt.md → использовать для построения структуры работы\n  4) coursework_structure.md → детальная структура курсовой работы\n  5) research/ → собирать материалы, статьи, данные\n  6) writer_prompt.md → использовать для написания разделов\n  7) sections/ → создавать файлы для каждого раздела курсовой\n  8) citation_helper_prompt.md → использовать для правильного оформления цитат и ссылок\n  9) references/ → хранить библиографические записи\n  10) references_list.md → список использованных источников\n  11) research_log.md → вести журнал исследований\n  12) draft_notes.md → заметки и черновики\n  13) appendix/ → приложения, таблицы, графики",
+  "fields": [
+    {
+      "id": "subject",
+      "label": "Subject (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter the subject or discipline"
+    },
+    {
+      "id": "topic",
+      "label": "Topic (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter the coursework topic"
+    }
+  ],
+  "options": []
+}
+

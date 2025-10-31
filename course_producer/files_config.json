@@ -1,0 +1,56 @@
+{
+  "preset_id": "course_producer",
+  "preset_name": "Course Producer",
+  "description": "Preset for producing and launching expert courses",
+  "directories": [
+    "modules",
+    "materials",
+    "promo",
+    "student_resources"
+  ],
+  "templates": [
+    {
+      "source": "prompt_course_strategy.md",
+      "destination": "course_strategy_prompt.md"
+    },
+    {
+      "source": "prompt_course_structure.md",
+      "destination": "course_structure_prompt.md"
+    },
+    {
+      "source": "prompt_content_producer.md",
+      "destination": "content_producer_prompt.md"
+    },
+    {
+      "source": "prompt_launch_planner.md",
+      "destination": "launch_planner_prompt.md"
+    }
+  ],
+  "empty_files": [
+    "course_overview.md",
+    "course_structure.md",
+    "launch_plan.md",
+    "pricing_strategy.md",
+    "marketing_materials.md",
+    "student_onboarding.md"
+  ],
+  "readme_template": "  0) course_strategy_prompt.md → заполнить концепцию курса, целевую аудиторию и цели\n  1) course_overview.md → создать обзор курса и его структуру\n  2) course_structure_prompt.md → детализировать структуру модулей и уроков\n  3) course_structure.md → детальная структура курса\n  4) content_producer_prompt.md → использовать для создания контента модулей\n  5) modules/ → создавать файлы для каждого модуля и урока\n  6) materials/ → хранить дополнительные материалы, задания, чеклисты\n  7) launch_planner_prompt.md → использовать для планирования запуска\n  8) launch_plan.md → детальный план запуска курса\n  9) pricing_strategy.md → стратегия ценообразования\n  10) marketing_materials.md → материалы для продвижения курса\n  11) student_resources/ → ресурсы для студентов",
+  "fields": [
+    {
+      "id": "course_topic",
+      "label": "Course Topic (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter the main topic of the course"
+    },
+    {
+      "id": "target_audience",
+      "label": "Target Audience (optional)",
+      "required": false,
+      "type": "text",
+      "description": "Enter target audience description"
+    }
+  ],
+  "options": []
+}
+
