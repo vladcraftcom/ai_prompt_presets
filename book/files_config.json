@@ -1,0 +1,55 @@
+{
+  "preset_id": "book",
+  "preset_name": "Book Writing",
+  "description": "Preset for book writing projects with AI assistance",
+  "directories": [
+    "chapters",
+    "research",
+    "drafts",
+    "notes"
+  ],
+  "templates": [
+    {
+      "source": "prompt_book_planning.md",
+      "destination": "book_planning_prompt.md"
+    },
+    {
+      "source": "prompt_chapter_structure.md",
+      "destination": "chapter_structure_prompt.md"
+    },
+    {
+      "source": "prompt_writing_guide.md",
+      "destination": "writing_guide_prompt.md"
+    },
+    {
+      "source": "prompt_editor.md",
+      "destination": "editor_prompt.md"
+    }
+  ],
+  "empty_files": [
+    "book_structure.md",
+    "book_progress.md",
+    "writing_log.md",
+    "editor_report.md"
+  ],
+  "readme_template": "  0) book_planning_prompt.md → заполнить контекст книги, структуру и цели\n  1) book_structure.md → создать детальную структуру глав\n  2) chapter_structure_prompt.md → детализировать структуру каждой главы\n  3) writing_guide_prompt.md → использовать для руководства при написании\n  4) chapters/ → создавать файлы для каждой главы по мере написания\n  5) drafts/ → хранить черновики, notes/ → заметки и исследования\n  6) editor_prompt.md → использовать для проверки качества написанных глав",
+  "fields": [
+    {
+      "id": "genre",
+      "label": "Genre (optional)",
+      "required": false,
+      "type": "select",
+      "options": [
+        "Fiction",
+        "Non-Fiction",
+        "Technical",
+        "Biography",
+        "Poetry",
+        "Other"
+      ],
+      "description": "Select the book genre"
+    }
+  ],
+  "options": []
+}
+
