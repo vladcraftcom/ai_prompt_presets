@@ -28,7 +28,14 @@ TRIGGERS (когда обновлять)
 - После согласования плана → `plan.md`.  
 - После КАЖДОГО шага плана →
   - допиши переписку в `chat_transcript.md` (append only подход сырой переписки сохраняемой в файл `chat_transcript.md`);
-  - добавь строку в `run_log.txt` формата: `[YYYY-MM-DDTHH:MM:SSZ] CMD: ... | ENV: py=3.12 venv=on | IN: ... | OUT: ... | DUR: <сек> | FILES: <n> | ARTS: <n> | STATUS: OK/FAIL` (время — ISO-8601 UTC) (append only подход).
+  - добавь строку в `run_log.txt` формата: `[YYYY-MM-DDTHH:MM:SSZ] CMD: ... | ENV: <язык>=<версия> <изоляция>=on/off | IN: ... | OUT: ... | DUR: <сек> | FILES: <n> | ARTS: <n> | STATUS: OK/FAIL` (время — ISO-8601 UTC) (append only подход).
+     - Примеры для разных языков:
+       - Python: `ENV: python=3.12 venv=on`
+       - Node.js: `ENV: node=20.0.0 npm=on`
+       - Rust: `ENV: rustc=1.75 cargo=on`
+       - Go: `ENV: go=1.21 mod=on`
+       - Java: `ENV: java=17 maven=on`
+       - C/C++: `ENV: gcc=12.2 compiler=on`
 - После аудита → перезапиши `audit_report.md` (таблица, риски, чек-лист, improved prompt).  
 - После фикса багов → `changelog.md` (дата, fixed/root cause/patch) (append only подход).  
  - При формировании плана и ПОСЛЕ КАЖДОГО шага плана → добавить запись в `changelog.md` по шаблону (см. ниже).
@@ -39,7 +46,8 @@ FORMATS (шаблоны)
   - Step 1 ...
   - Tests: ...
 - run_log.txt:
-  [YYYY-MM-DD HH:MM] CMD: ... | ENV: py=3.12 venv=on | IN: ... | OUT: ... | STATUS: OK/FAIL
+  [YYYY-MM-DD HH:MM] CMD: ... | ENV: <язык>=<версия> <изоляция>=on/off | IN: ... | OUT: ... | STATUS: OK/FAIL
+  Примеры: `ENV: python=3.12 venv=on`, `ENV: node=20.0.0 npm=on`, `ENV: rustc=1.75 cargo=on`, `ENV: go=1.21 mod=on`
 - audit_report.md:
   | Metric | Score (0-5) |
   |-------|-------------|
