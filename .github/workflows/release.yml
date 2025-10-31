@@ -1,0 +1,100 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      # Срабатывает при пуше тегов, начинающихся с 'v' и содержащих версию
+      # Примеры: v0.1.0, v1.2.3, v0.1
+      - 'v*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Версия для релиза (например, v0.1.0)'
+        required: true
+        type: string
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Получить всю историю для генерации release notes
+      
+      - name: Determine version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            # Извлекаем версию из тега (refs/tags/v0.1.0 -> v0.1.0)
+            VERSION=${GITHUB_REF#refs/tags/}
+          fi
+          
+          # Нормализуем версию (убираем 'v' если есть, потом добавляем обратно)
+          VERSION=$(echo "$VERSION" | sed 's/^v//')
+          if [[ ! "$VERSION" =~ ^[0-9] ]]; then
+            echo "Error: Неверный формат версии. Используйте формат v0.1.0 или 0.1.0"
+            exit 1
+          fi
+          
+          # Добавляем 'v' если его нет
+          if [[ ! "$VERSION" =~ ^v ]]; then
+            VERSION="v$VERSION"
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Version: $VERSION"
+      
+      - name: Create release notes
+        id: release_notes
+        run: |
+          PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "Это первый релиз. Генерируем release notes с самого начала."
+            RELEASE_NOTES=$(git log --pretty=format:"- %s (%h)" --reverse)
+          else
+            echo "Генерируем release notes с $PREVIOUS_TAG"
+            RELEASE_NOTES=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)")
+          fi
+          
+          # Добавляем информацию о пресетах
+          PRESETS_INFO=$(find . -name "files_config.json" -not -path "./.git/*" | wc -l)
+          HEADER="## Версия ${{ steps.version.outputs.version }}
+
+### Изменения:
+$RELEASE_NOTES
+
+### Статистика:
+- Количество пресетов: $PRESETS_INFO
+
+### Использование:
+```bash
+# Скачать архив версии
+curl -L https://github.com/${{ github.repository }}/archive/refs/tags/${{ steps.version.outputs.version }}.zip -o presets.zip
+
+# Или использовать в программе
+# Укажите URL: https://github.com/${{ github.repository }}/archive/refs/tags/${{ steps.version.outputs.version }}.zip
+```"
+          
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$HEADER" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: "Presets Release ${{ steps.version.outputs.version }}"
+          body: ${{ steps.release_notes.outputs.notes }}
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
