@@ -10,6 +10,10 @@
   ],
   "templates": [
     {
+      "source": "context_entry.md",
+      "destination": "context_entry.md"
+    },
+    {
       "source": "prompt_content_strategy.md",
       "destination": "content_strategy_prompt.md"
     },
@@ -33,7 +37,7 @@
     "performance_tracker.md",
     "hashtag_research.md"
   ],
-  "readme_template": "  0) content_strategy_prompt.md → заполнить цели, целевую аудиторию и платформы\n  1) content_strategy.md → создать детальную стратегию контента\n  2) content_calendar_prompt.md → использовать для планирования календаря публикаций\n  3) content_calendar.md → создать календарь публикаций\n  4) content_creator_prompt.md → использовать для создания контента\n  5) content_ideas.md → собирать и хранить идеи для контента\n  6) content_optimizer_prompt.md → использовать для оптимизации готового контента\n  7) performance_tracker.md → отслеживать метрики и аналитику\n  8) hashtag_research.md → исследовать и хранить релевантные хештеги",
+  "readme_template": "  **НАЧНИ С ЭТОГО**: context_entry.md → прочитай этот файл для понимания контекста пресета и порядка работы\n  0) content_strategy_prompt.md → заполнить цели, целевую аудиторию и платформы\n  1) content_strategy.md → создать детальную стратегию контента\n  2) content_calendar_prompt.md → использовать для планирования календаря публикаций\n  3) content_calendar.md → создать календарь публикаций\n  4) content_creator_prompt.md → использовать для создания контента\n  5) content_ideas.md → собирать и хранить идеи для контента\n  6) content_optimizer_prompt.md → использовать для оптимизации готового контента\n  7) performance_tracker.md → отслеживать метрики и аналитику\n  8) hashtag_research.md → исследовать и хранить релевантные хештеги",
   "fields": [
     {
       "id": "platforms",

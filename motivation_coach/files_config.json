@@ -10,6 +10,10 @@
   ],
   "templates": [
     {
+      "source": "context_entry.md",
+      "destination": "context_entry.md"
+    },
+    {
       "source": "prompt_coaching_strategy.md",
       "destination": "coaching_strategy_prompt.md"
     },
@@ -34,7 +38,7 @@
     "progress_reports.md",
     "session_notes.md"
   ],
-  "readme_template": "  0) coaching_strategy_prompt.md → заполнить философию коучинга и подходы\n  1) coaching_philosophy.md → описать философию и методологию коучинга\n  2) goal_setter_prompt.md → использовать для постановки целей с клиентами\n  3) goal_framework.md → рамка для постановки и достижения целей\n  4) motivation_techniques_prompt.md → использовать для применения техник мотивации\n  5) motivation_toolkit.md → набор техник и инструментов мотивации\n  6) programs/ → программы коучинга для разных целей\n  7) exercises/ → упражнения и практики для клиентов\n  8) progress_tracker_prompt.md → использовать для отслеживания прогресса\n  9) tracking/ → хранить трекинг прогресса клиентов\n  10) progress_reports.md → отчеты о прогрессе\n  11) session_notes.md → записи сессий с клиентами\n  12) client_profiles.md → профили клиентов\n  13) resources/ → дополнительные ресурсы, материалы, инструменты",
+  "readme_template": "  **НАЧНИ С ЭТОГО**: context_entry.md → прочитай этот файл для понимания контекста пресета и порядка работы\n  0) coaching_strategy_prompt.md → заполнить философию коучинга и подходы\n  1) coaching_philosophy.md → описать философию и методологию коучинга\n  2) goal_setter_prompt.md → использовать для постановки целей с клиентами\n  3) goal_framework.md → рамка для постановки и достижения целей\n  4) motivation_techniques_prompt.md → использовать для применения техник мотивации\n  5) motivation_toolkit.md → набор техник и инструментов мотивации\n  6) programs/ → программы коучинга для разных целей\n  7) exercises/ → упражнения и практики для клиентов\n  8) progress_tracker_prompt.md → использовать для отслеживания прогресса\n  9) tracking/ → хранить трекинг прогресса клиентов\n  10) progress_reports.md → отчеты о прогрессе\n  11) session_notes.md → записи сессий с клиентами\n  12) client_profiles.md → профили клиентов\n  13) resources/ → дополнительные ресурсы, материалы, инструменты",
   "fields": [
     {
       "id": "coaching_focus",

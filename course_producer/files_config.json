@@ -10,6 +10,10 @@
   ],
   "templates": [
     {
+      "source": "context_entry.md",
+      "destination": "context_entry.md"
+    },
+    {
       "source": "prompt_course_strategy.md",
       "destination": "course_strategy_prompt.md"
     },
@@ -34,7 +38,7 @@
     "marketing_materials.md",
     "student_onboarding.md"
   ],
-  "readme_template": "  0) course_strategy_prompt.md → заполнить концепцию курса, целевую аудиторию и цели\n  1) course_overview.md → создать обзор курса и его структуру\n  2) course_structure_prompt.md → детализировать структуру модулей и уроков\n  3) course_structure.md → детальная структура курса\n  4) content_producer_prompt.md → использовать для создания контента модулей\n  5) modules/ → создавать файлы для каждого модуля и урока\n  6) materials/ → хранить дополнительные материалы, задания, чеклисты\n  7) launch_planner_prompt.md → использовать для планирования запуска\n  8) launch_plan.md → детальный план запуска курса\n  9) pricing_strategy.md → стратегия ценообразования\n  10) marketing_materials.md → материалы для продвижения курса\n  11) student_resources/ → ресурсы для студентов",
+  "readme_template": "  **НАЧНИ С ЭТОГО**: context_entry.md → прочитай этот файл для понимания контекста пресета и порядка работы\n  0) course_strategy_prompt.md → заполнить концепцию курса, целевую аудиторию и цели\n  1) course_overview.md → создать обзор курса и его структуру\n  2) course_structure_prompt.md → детализировать структуру модулей и уроков\n  3) course_structure.md → детальная структура курса\n  4) content_producer_prompt.md → использовать для создания контента модулей\n  5) modules/ → создавать файлы для каждого модуля и урока\n  6) materials/ → хранить дополнительные материалы, задания, чеклисты\n  7) launch_planner_prompt.md → использовать для планирования запуска\n  8) launch_plan.md → детальный план запуска курса\n  9) pricing_strategy.md → стратегия ценообразования\n  10) marketing_materials.md → материалы для продвижения курса\n  11) student_resources/ → ресурсы для студентов",
   "fields": [
     {
       "id": "course_topic",

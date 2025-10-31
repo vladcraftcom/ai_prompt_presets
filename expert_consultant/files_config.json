@@ -10,6 +10,10 @@
   ],
   "templates": [
     {
+      "source": "context_entry.md",
+      "destination": "context_entry.md"
+    },
+    {
       "source": "prompt_consultation_framework.md",
       "destination": "consultation_framework_prompt.md"
     },
@@ -34,7 +38,7 @@
     "recommendations_library.md",
     "expertise_areas.md"
   ],
-  "readme_template": "  0) consultation_framework_prompt.md → заполнить область экспертизы и методологию консультирования\n  1) expertise_profile.md → описать профиль эксперта и область знаний\n  2) expertise_areas.md → детализировать области экспертизы\n  3) consultation_protocol.md → создать протокол проведения консультаций\n  4) knowledge_manager_prompt.md → использовать для управления базой знаний\n  5) knowledge_base/ → хранить структурированные знания и информацию\n  6) knowledge_map.md → карта знаний и взаимосвязей\n  7) case_analyzer_prompt.md → использовать для анализа кейсов клиентов\n  8) consultations/ → хранить записи консультаций\n  9) case_studies/ → собирать и структурировать кейсы\n  10) client_cases.md → база кейсов клиентов\n  11) recommendation_engine_prompt.md → использовать для генерации рекомендаций\n  12) recommendations_library.md → библиотека типовых рекомендаций\n  13) templates/ → шаблоны для консультаций",
+  "readme_template": "  **НАЧНИ С ЭТОГО**: context_entry.md → прочитай этот файл для понимания контекста пресета и порядка работы\n  0) consultation_framework_prompt.md → заполнить область экспертизы и методологию консультирования\n  1) expertise_profile.md → описать профиль эксперта и область знаний\n  2) expertise_areas.md → детализировать области экспертизы\n  3) consultation_protocol.md → создать протокол проведения консультаций\n  4) knowledge_manager_prompt.md → использовать для управления базой знаний\n  5) knowledge_base/ → хранить структурированные знания и информацию\n  6) knowledge_map.md → карта знаний и взаимосвязей\n  7) case_analyzer_prompt.md → использовать для анализа кейсов клиентов\n  8) consultations/ → хранить записи консультаций\n  9) case_studies/ → собирать и структурировать кейсы\n  10) client_cases.md → база кейсов клиентов\n  11) recommendation_engine_prompt.md → использовать для генерации рекомендаций\n  12) recommendations_library.md → библиотека типовых рекомендаций\n  13) templates/ → шаблоны для консультаций",
   "fields": [
     {
       "id": "expertise_area",
